@@ -6,13 +6,18 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\ground_filler_sprt</sprite>
-    <sprite>sprites\player_filler_sprt</sprite>
-    <sprite>sprites\bomb_spr</sprite>
+    <sprites name="Player Sprites">
+      <sprite>sprites\player_filler_sprt</sprite>
+      <sprite>sprites\player_orb_spr</sprite>
+      <sprite>sprites\time_bomb_spr</sprite>
+      <sprite>sprites\bomb_spr</sprite>
+    </sprites>
+    <sprites name="Environment Sprites">
+      <sprite>sprites\ground_filler_sprt</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
-  <scripts name="scripts"/>
   <objects name="objects">
     <object>objects\ground_obj</object>
     <object>objects\player_obj</object>

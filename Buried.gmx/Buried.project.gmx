@@ -8,13 +8,15 @@
   <sprites name="sprites">
     <sprite>sprites\ground_filler_sprt</sprite>
     <sprite>sprites\player_filler_sprt</sprite>
+    <sprite>sprites\bomb_spr</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
-  <fonts name="fonts"/>
+  <scripts name="scripts"/>
   <objects name="objects">
     <object>objects\ground_obj</object>
     <object>objects\player_obj</object>
+    <object>objects\bomb_obj</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\physics_playground_rm</room>

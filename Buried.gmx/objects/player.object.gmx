@@ -428,7 +428,7 @@ else if propellerid == 8{
         <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
-        <whoName>player_obj</whoName>
+        <whoName>obj_player</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>

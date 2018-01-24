@@ -82,7 +82,7 @@ else{
           <argument>
             <kind>1</kind>
             <string>flashes--;
-image_blend = c_;
+image_blend = c_yellow;
 alarm_set(1,(.5/5)*(flashes+1)*room_speed);
 </string>
           </argument>

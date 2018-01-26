@@ -22,6 +22,8 @@
     <object>objects\ground_obj</object>
     <object>objects\bomb_obj</object>
     <object>objects\player_obj</object>
+    <object>objects\player_object2</object>
+    <object>objects\physical_obj</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\physics_playground_rm</room>

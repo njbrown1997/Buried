@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>grounded = false;
 blocked = 0
+gravity_increment = .2
 </string>
           </argument>
         </arguments>
@@ -58,6 +59,7 @@ if !place_meeting(x, y + 1,ground_obj)
 else
    {
    move_outside_solid(direction-180,1000);
+   if (!grounded) hspeed = 0;
    grounded = true;
    }
    
@@ -121,7 +123,7 @@ if (grounded or blocked &gt;0){
           <argument>
             <kind>1</kind>
             <string>///Gravity
-if(!grounded) vspeed+= .1;
+if(!grounded) vspeed+= gravity_increment;
 </string>
           </argument>
         </arguments>

@@ -8,6 +8,7 @@
   <sprites name="sprites">
     <sprites name="Player Sprites">
       <sprite>sprites\player_filler_sprt</sprite>
+      <sprite>sprites\sprite5</sprite>
       <sprite>sprites\player_orb_spr</sprite>
       <sprite>sprites\time_bomb_spr</sprite>
       <sprite>sprites\bomb_spr</sprite>
@@ -21,8 +22,8 @@
   <objects name="objects">
     <object>objects\ground_obj</object>
     <object>objects\bomb_obj</object>
-    <object>objects\player_obj</object>
-    <object>objects\player_object2</object>
+    <object>objects\player_object</object>
+    <object>objects\player_air_object</object>
     <object>objects\physical_obj</object>
   </objects>
   <rooms name="rooms">

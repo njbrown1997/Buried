@@ -151,7 +151,7 @@
     <instance objName="ground_obj" x="990" y="760" name="inst_13180E44" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ground_obj" x="1000" y="760" name="inst_0B906BE9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ground_obj" x="1010" y="760" name="inst_319DA11C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="player_object2" x="520" y="390" name="inst_4D9723C6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="player_object" x="520" y="390" name="inst_4D9723C6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ground_obj" x="460" y="750" name="inst_BF587136" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ground_obj" x="460" y="740" name="inst_B97EB478" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ground_obj" x="460" y="720" name="inst_4E07FFFE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

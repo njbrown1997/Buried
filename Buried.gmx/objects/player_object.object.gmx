@@ -104,6 +104,7 @@ alarm_set(1,.1*room_speed);
           <argument>
             <kind>1</kind>
             <string>event_inherited();
+
 </string>
           </argument>
         </arguments>
@@ -208,7 +209,7 @@ if (grounded) vspeed = -jump_speed;
             <string>if (grounded){
 sprite_index = mega_run_spr;
 image_xscale = -1;
-image_speed = .1;
+image_speed = .15;
 }
 </string>
           </argument>
@@ -235,7 +236,7 @@ image_speed = .1;
             <string>if (grounded){
 image_xscale = 1;
 sprite_index = mega_run_spr;
-image_speed = .1;
+image_speed = .15;
 }
 </string>
           </argument>

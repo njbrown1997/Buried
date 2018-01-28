@@ -96,12 +96,6 @@ if (blocked = 3 and vspeed&lt;0){
    vspeed = 0;
 }
 
-//For Testing (Player changes color when in contact with a surface).
-if (grounded or blocked &gt;0){
-   image_index =1
-}else{
-      image_index = 0;
-}
 </string>
           </argument>
         </arguments>

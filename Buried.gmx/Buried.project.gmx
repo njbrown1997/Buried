@@ -16,6 +16,9 @@
     <sprites name="Environment Sprites">
       <sprite>sprites\ground_filler_sprt</sprite>
     </sprites>
+    <sprite>sprites\mega_run_spr</sprite>
+    <sprite>sprites\mega_idle_spr</sprite>
+    <sprite>sprites\mega_fall_spr</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>

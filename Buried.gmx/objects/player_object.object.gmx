@@ -109,6 +109,36 @@ alarm_set(1,.1*room_speed);
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Change Sprite
+if(!grounded and sprite_index != mega_fall_spr){
+             sprite_index = mega_fall_spr;
+}
+
+if(grounded and sprite_index = mega_fall_spr){
+            sprite_index = mega_idle_spr;
+            image_speed = 0;
+}          
+
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="5" enumb="68">
       <action>
@@ -127,8 +157,12 @@ alarm_set(1,.1*room_speed);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (grounded) hspeed = ground_speed;
-else hspeed =(ground_speed)
+            <string>if (grounded and sprite_index=mega_idle_spr){
+sprite_index = mega_run_spr;
+image_xscale = -1;
+image_speed = .15;
+hspeed = ground_speed;
+}
 </string>
           </argument>
         </arguments>
@@ -151,10 +185,40 @@ else hspeed =(ground_speed)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (grounded){
+            <string>if (grounded and sprite_index=mega_idle_spr){
+sprite_index = mega_run_spr;
+image_xscale = 1;
+image_speed = .15;
 hspeed = -ground_speed;
 }
-else hspeed =-(ground_speed)
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="5" enumb="32">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(sprite_index = mega_idle_spr){
+image_index = 2;
+alarm_set(0,.1*room_speed);
+}
+
 </string>
           </argument>
         </arguments>
@@ -177,90 +241,9 @@ else hspeed =-(ground_speed)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (!grounded){
-instance_create(x,y,player_air_object);
-instance_destroy();
-}
-else{
-if (grounded) vspeed = -jump_speed;
-}
+            <string>if (grounded) vspeed = -jump_speed;
+
 </string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="68">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if (grounded){
-sprite_index = mega_run_spr;
-image_xscale = -1;
-image_speed = .15;
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="65">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if (grounded){
-image_xscale = 1;
-sprite_index = mega_run_spr;
-image_speed = .15;
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="32">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string></string>
           </argument>
         </arguments>
       </action>
@@ -282,7 +265,7 @@ image_speed = .15;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (grounded){
+            <string>if (grounded and sprite_index=mega_run_spr and image_xscale&lt;0){
 hspeed = 0;
 sprite_index = mega_idle_spr;
 image_speed = 0;
@@ -309,7 +292,7 @@ image_speed = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (grounded){
+            <string>if (grounded and sprite_index=mega_run_spr and image_xscale&gt;0){
 hspeed = 0;
 image_xscale = 1
 sprite_index = mega_idle_spr;

@@ -16,20 +16,25 @@
     <sprites name="Environment Sprites">
       <sprite>sprites\ground_filler_sprt</sprite>
     </sprites>
-    <sprite>sprites\bullet_spr</sprite>
-    <sprite>sprites\mega_run_spr</sprite>
-    <sprite>sprites\mega_idle_spr</sprite>
-    <sprite>sprites\mega_fall_spr</sprite>
+    <sprites name="Mega Man">
+      <sprite>sprites\mega_fall_spr</sprite>
+      <sprite>sprites\mega_run_shoot_spr</sprite>
+      <sprite>sprites\mega_idle_spr</sprite>
+      <sprite>sprites\mega_run_spr</sprite>
+      <sprite>sprites\bullet_spr</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\ground_obj</object>
     <object>objects\bomb_obj</object>
-    <object>objects\player_object</object>
     <object>objects\player_air_object</object>
     <object>objects\physical_obj</object>
-    <object>objects\bullet_obj</object>
+    <objects name="Mega Man">
+      <object>objects\mega_man_obj</object>
+      <object>objects\bullet_obj</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\physics_playground_rm</room>

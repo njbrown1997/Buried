@@ -80,8 +80,16 @@ alarm_set(0,3*room_speed);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_index = 1;
-alarm_set(1,.1*room_speed);
+            <string>if(sprite_index = mega_idle_spr){
+    image_index = 1;
+    alarm_set(1,.1*room_speed);
+}
+else if(sprite_index = mega_run_shoot_spr){
+     sprite_index = mega_run_spr;
+}
+else if(sprite_index = mega_fall_spr){
+     image_index = 0;
+}
 </string>
           </argument>
         </arguments>
@@ -128,7 +136,10 @@ alarm_set(1,.1*room_speed);
             <kind>1</kind>
             <string>///Change Sprite
 if(!grounded and sprite_index != mega_fall_spr){
+             image_index = 0;
+             image_speed = 0;
              sprite_index = mega_fall_spr;
+
 }
 
 if(grounded and sprite_index = mega_fall_spr){
@@ -242,13 +253,38 @@ hspeed = -ground_speed;
             <string>if(sprite_index = mega_idle_spr){
     image_index = 2;
     bullet = instance_create(x-4,y-16,bullet_obj);
-    bullet.hspeed = 8;
+    bullet.hspeed = 10;
     
     if(image_xscale&lt;0) bullet.direction = 0;
     else bullet.direction = 180;
     
     alarm_set(0,.25*room_speed);
 }
+else if(sprite_index = mega_run_spr or sprite_index = mega_run_shoot_spr){
+    sprite_index = mega_run_shoot_spr;
+    
+    bullet = instance_create(x-4,y-17,bullet_obj);
+    bullet.hspeed = 10;
+    
+    if(image_xscale&lt;0) bullet.direction = 0;
+    else bullet.direction = 180;
+    
+    alarm_set(0,.25*room_speed);
+    
+}
+
+else if(sprite_index = mega_fall_spr){
+    image_index = 1;     
+     
+    bullet = instance_create(x-4,y-23,bullet_obj);
+    bullet.hspeed = 10;
+    
+    if(image_xscale&lt;0) bullet.direction = 0;
+    else bullet.direction = 180;
+    
+    alarm_set(0,.25*room_speed);
+}
+
 
 </string>
           </argument>
@@ -272,7 +308,7 @@ hspeed = -ground_speed;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (grounded and sprite_index=mega_run_spr and image_xscale&lt;0){
+            <string>if (grounded and (sprite_index=mega_run_spr or sprite_index = mega_run_shoot_spr) and image_xscale&lt;0){
 hspeed = 0;
 sprite_index = mega_idle_spr;
 image_speed = 0;
@@ -300,7 +336,7 @@ image_index = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (grounded and (sprite_index=mega_run_spr) and image_xscale&gt;0){
+            <string>if (grounded and (sprite_index=mega_run_spr or sprite_index = mega_run_shoot_spr) and image_xscale&gt;0){
 hspeed = 0;
 image_xscale = 1
 sprite_index = mega_idle_spr;

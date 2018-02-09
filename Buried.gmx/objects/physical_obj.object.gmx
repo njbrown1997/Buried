@@ -28,6 +28,7 @@
             <string>grounded = false;
 blocked = 0
 gravity_increment = .2
+prev_dir = 0;
 </string>
           </argument>
         </arguments>
@@ -50,7 +51,10 @@ gravity_increment = .2
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Collisions with a ground obj.
+            <string>if(speed !=0) prev_dir = direction;
+direction = prev_dir;
+
+///Collisions with a ground obj.
 //Check for landing collision. Determines whether the player is grounded (This condition will be useful later.)
 if !place_meeting(x, y + 1,ground_obj)
    {
